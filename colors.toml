@@ -1,0 +1,38 @@
+# Septima — derived from the Septima design system (design.septima.dk)
+# Brand anchors: patroleum #113342, onedoor #2E495C, primary #397C67,
+# secondary #2F607C, mark green #0d9474, warning #F5D041, danger #e76754.
+
+mode = "dark"
+
+accent = "#0d9474"
+selection = "#2E495C"
+muted = "#4a7183"
+
+background = "#113342"
+dark_background = "#0d2632"
+darker_background = "#091d26"
+lighter_background = "#1b4a5c"
+
+foreground = "#F0F5EF"
+dark_foreground = "#7ea3b3"
+light_foreground = "#dce7e4"
+bright_foreground = "#ffffff"
+
+active_border_color = "#0d9474"
+active_tab_background = "#397C67"
+
+red = "#e76754"
+yellow = "#F5D041"
+orange = "#ec8576"
+green = "#0d9474"
+cyan = "#9cbeb3"
+blue = "#5a97bd"
+magenta = "#d59aa4"
+brown = "#7b5b55"
+
+bright_red = "#f08c7c"
+bright_yellow = "#f7dd72"
+bright_green = "#2fb894"
+bright_cyan = "#b8d4cb"
+bright_blue = "#7fb3d2"
+bright_magenta = "#e3b4bc"
