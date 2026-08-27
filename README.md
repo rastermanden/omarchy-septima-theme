@@ -10,11 +10,31 @@ Foreground/background contrast is **12.06:1**.
 ## Install
 
 ```bash
-omarchy theme install https://github.com/rastermanden/omarchy-theme-septima
-omarchy theme set Septima
+omarchy theme install https://github.com/rastermanden/omarchy-septima-theme && omarchy theme set Septima
 ```
 
-Cycle the wallpapers with `omarchy theme bg next`.
+That clones the theme and applies it — colours, wallpapers and icon theme. A
+wallpaper is selected automatically; cycle them with `omarchy theme bg next`.
+
+The screensaver is a **separate step**. Omarchy never touches
+`~/.config/omarchy/branding/` during a theme install, so nothing above installs
+it:
+
+```bash
+cp ~/.config/omarchy/branding/screensaver.txt{,.bak}                              # keep the Omarchy original
+cp ~/.config/omarchy/themes/septima/extras/screensaver.txt ~/.config/omarchy/branding/screensaver.txt
+omarchy launch screensaver force                                                  # preview it
+```
+
+The art is sized for a canvas of about **111×30 characters** (a 2560×1600 panel
+at scale 1.6, which is what Omarchy's font size 18 works out to). On a smaller
+display it will clip; regenerate it with `tools/generate-screensaver.sh`, which
+documents how to measure your own canvas. See [Screensaver](#screensaver) below.
+
+> If you are developing this theme rather than consuming it, do **not** run
+> `omarchy theme install` — it clones into the same slot, and a clone carries a
+> `.git` directory that makes Omarchy treat the theme as untrusted. Use the
+> symlink setup in [Hacking on it locally](#hacking-on-it-locally) instead.
 
 ## Palette
 
@@ -63,19 +83,16 @@ All four are 3840×2400 (16:10), using the mark's actual SVG path data.
 ## Screensaver
 
 Omarchy's screensaver renders `~/.config/omarchy/branding/screensaver.txt` through
-`ttfx`. Theme installs do **not** touch branding, so this is a manual step:
-
-```bash
-cp ~/.config/omarchy/branding/screensaver.txt{,.bak}   # keep the Omarchy original
-cp extras/screensaver.txt ~/.config/omarchy/branding/screensaver.txt
-omarchy launch screensaver force                       # preview it
-```
+`ttfx` at a random effect each cycle. `extras/screensaver.txt` is the official
+Septima logotype transcoded to braille. Install it with the commands in
+[Install](#install) above.
 
 The art is 100×12 characters. That ceiling is not arbitrary: the screensaver runs
 its terminal at font size 18, so on a 2560×1600 panel at scale 1.6 the cell is
-~23px and the canvas is only about **111×30 characters**. Wider art clips. If your
-display differs, regenerate with `tools/generate-screensaver.sh`, which documents
-how to measure your own canvas.
+~23px and the canvas is only about **111×30 characters**. Wider art clips — a
+126-column version looks considerably better and does not fit. If your display
+differs, regenerate with `tools/generate-screensaver.sh`, which documents how to
+measure your own canvas.
 
 ## Regenerating
 
@@ -97,8 +114,8 @@ Omarchy gives your own themes, symlink it rather than cloning into place — a
 symlink is explicitly exempt from the clone rules:
 
 ```bash
-git clone https://github.com/rastermanden/omarchy-theme-septima ~/Work/omarchy-theme-septima
-ln -sfn ~/Work/omarchy-theme-septima ~/.config/omarchy/themes/septima
+git clone https://github.com/rastermanden/omarchy-septima-theme ~/Work/omarchy-septima-theme
+ln -sfn ~/Work/omarchy-septima-theme ~/.config/omarchy/themes/septima
 omarchy theme set Septima
 ```
 
