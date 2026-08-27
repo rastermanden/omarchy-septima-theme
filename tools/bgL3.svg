@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2400" viewBox="0 0 3840 2400">
+  <rect width="3840" height="2400" fill="#F0F5EF"/>
+  <g>
+    <rect x="0"    y="0" width="768" height="2400" fill="#d7e5e1"/>
+    <rect x="768"  y="0" width="768" height="2400" fill="#dce7e4"/>
+    <rect x="1536" y="0" width="768" height="2400" fill="#d5dfe5"/>
+    <rect x="2304" y="0" width="768" height="2400" fill="#cfdcde"/>
+    <rect x="3072" y="0" width="768" height="2400" fill="#F0F5EF"/>
+  </g>
+  <rect width="3840" height="2400" fill="#F6F9F5" opacity="0.35"/>
+  <g transform="translate(1090.8,366.9) scale(1.9)" fill="#397C67" opacity="0.16"><path d="m366.15,378.41l-57-57,10.2-10.2,57,57c10.2-10.2,24.8-17.5,39.4-20.5V23.51H21.45v394.4h324.3c2.8-14.6,10.1-29.2,20.4-39.5Z"/><path d="m459.55,23.61v324.3c14.6,2.9,29.2,10.2,39.4,20.5l57-57,10.2,10.2-57,57c10.2,11.7,16.1,24.8,20.5,39.4h324.3V23.61h-394.4Z"/><path d="m376.35,511.41l-57,57-10.2-10.2,57-57c-10.2-11.7-16.1-24.8-20.5-39.4H21.35v394.4h394.4v-324.4c-14.6-4.4-29.2-10.2-39.4-20.4Z"/></g>
+</svg>

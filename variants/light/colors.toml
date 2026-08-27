@@ -1,0 +1,47 @@
+# Septima Light — the design system's own light ground (design.septima.dk).
+#
+# Septima's design system is natively light: white body, #565657 text, #397C67
+# primary. This variant follows it, on the brand's --bs-light #F0F5EF surface.
+#
+# Where a brand colour is unreadable as text on that surface, the design
+# system's own *-text-emphasis value is used instead. Measured against #F0F5EF:
+#   --bs-danger  #e76754 = 2.94:1  -> #c1462f (4.54:1)
+#   --bs-warning #F5D041 = 1.36:1  -> #62531a (6.86:1, --bs-warning-text-emphasis)
+
+mode = "light"
+
+accent = "#397C67"
+selection = "#d7e5e1"
+muted = "#5e726c"
+
+background = "#F0F5EF"
+dark_background = "#e6ece5"
+darker_background = "#dce7e4"
+lighter_background = "#F6F9F5"
+
+foreground = "#1D1E1F"
+dark_foreground = "#5e726c"
+light_foreground = "#565657"
+bright_foreground = "#000000"
+
+active_border_color = "#397C67"
+active_tab_background = "#d7e5e1"
+
+red = "#c1462f"
+yellow = "#62531a"
+orange = "#a8522c"
+green = "#2e6352"
+cyan = "#104e5b"
+blue = "#2F607C"
+magenta = "#8a4b57"
+brown = "#5c2922"
+
+# Brights match the normals, as catppuccin-latte does. The brand's vivid values
+# (#e76754, #F5D041, #0d9474) all fall below 4.5:1 on this ground, so promoting
+# them here would make bold text harder to read, not easier.
+bright_red = "#c1462f"
+bright_yellow = "#62531a"
+bright_green = "#2e6352"
+bright_cyan = "#104e5b"
+bright_blue = "#2F607C"
+bright_magenta = "#8a4b57"

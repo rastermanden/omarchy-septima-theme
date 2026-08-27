@@ -65,9 +65,40 @@ Two caveats, stated plainly:
   against white and reads too dark against the petroleum background.
 
 The design system itself is **light** (white ground, `#565657` body text). This
-theme is dark because Omarchy is dark-centric; `04-mint-light.png` is included
-for a light desktop, and flipping `mode = "light"` in `colors.toml` is a
-reasonable starting point for a light variant.
+theme is dark because Omarchy is dark-centric — see [Light variant](#light-variant)
+for one that follows the design system's own ground.
+
+## Light variant
+
+`variants/light/` is a complete second theme on the brand's `--bs-light`
+`#F0F5EF` surface, at **15.12:1** contrast. One git repo maps to one installable
+Omarchy theme, so it cannot ride along with `omarchy theme install`; link it in
+instead:
+
+```bash
+tools/install-light-variant.sh && omarchy theme set "Septima Light"
+```
+
+Switch back with `omarchy theme set Septima`.
+
+Two brand colours are unusable as text on a light ground, so the light variant
+substitutes the design system's own `-text-emphasis` values — these are measured,
+not guessed:
+
+| Slot | Dark theme | Light variant | Why |
+|---|---|---|---|
+| red | `#e76754` | `#c1462f` | `--bs-danger` is 2.94:1 on `#F0F5EF`; the substitute is 4.54:1 |
+| yellow | `#F5D041` | `#62531a` | `--bs-warning` is 1.36:1; `--bs-warning-text-emphasis` is 6.86:1 |
+| green | `#0d9474` | `#2e6352` | the mark green is 3.45:1; this is the darkened primary |
+| accent | `#0d9474` | `#397C67` | `--bs-primary`, the design system's own accent |
+
+Bright ANSI colours match the normals, as `catppuccin-latte` does. Promoting the
+vivid brand values there would make bold text *harder* to read on this ground,
+not easier.
+
+The variant ships its own three wallpapers (`01-mint`, `02-mark-light`,
+`03-paper`) and does **not** include the screensaver — that art is a black-ground
+silhouette and is shared from the main theme.
 
 ## Backgrounds
 
