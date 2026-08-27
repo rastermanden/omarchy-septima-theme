@@ -17,8 +17,10 @@ set -euo pipefail
 cd "$(dirname "$0")"
 logo=${1:-logo-color-black.svg}
 
+# The logotype is vendored (see SOURCES.md), so this runs offline and stays
+# pinned to a known logo. The fetch is only a fallback if it has been deleted.
 if [[ ! -f $logo ]]; then
-  echo "Fetching logotype from design.septima.dk ..." >&2
+  echo "Vendored $logo missing -- fetching from design.septima.dk ..." >&2
   curl -sL --max-time 20 -o logo-color-black.svg \
     https://design.septima.dk/cdn/logo/logotype/logo-color-black/logo-color-black.svg
   logo=logo-color-black.svg

@@ -101,6 +101,11 @@ tools/generate-backgrounds.sh    # wallpapers   (needs ImageMagick 7)
 tools/generate-screensaver.sh    # screensaver  (needs omarchy + ImageMagick 7)
 ```
 
+Both run offline and are byte-reproducible — the brand SVGs they consume are
+vendored in `tools/` and pinned by checksum, so regenerating an unchanged asset
+produces no git diff. See [`tools/SOURCES.md`](tools/SOURCES.md) for provenance
+and how to re-pin against an upstream logo change.
+
 ## Hacking on it locally
 
 Omarchy holds themes cloned from a repo to a restricted file list — it drops
